@@ -1,6 +1,8 @@
 <a name="readme-top"></a>
 
 <div align="center">
+   <img src="./app/assets/images/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="38px" height="auto" />
+  <br/>
 
   <h3><b> Socials App 👥</b></h3>
 
