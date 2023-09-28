@@ -1,10 +1,11 @@
 <a name="readme-top"></a>
 
 <div align="center">
-   <img src="./app/assets/images/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="38px" height="auto" />
+   <img src="./app/assets/images/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="23px" height="auto" />
   <br/>
-
-  <h3><b> Socials App 👥</b></h3>
+    <h3><b> Socials App 👥</b></h3>
+     <img src="./app/assets/images/socials-banner.PNG" alt="Socials Banner" />
+  <br/>
 
 </div>
 
