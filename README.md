@@ -1,10 +1,11 @@
 <a name="readme-top"></a>
 
 <div align="center">
-   <img src="./app/assets/images/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="38px" height="auto" />
+   <img src="./app/assets/images/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="23px" height="auto" />
   <br/>
-
-  <h3><b> Socials App 👥</b></h3>
+    <h3><b> Socials App 👥</b></h3>
+     <img src="./app/assets/images/socials-banner.PNG" alt="Socials Banner" />
+  <br/>
 
 </div>
 
@@ -131,9 +132,6 @@ To run tests, run the following command:
 ## 🙏🏻 Acknowledgements <a name="acknowledgements"></a>
 
 I'd like to express my gratitude to everyone who made this project possible.
-
-- Original design idea by **Nelson Sakwa** on **Behance**.
-- Mexico's pictures via **Unsplash**
 
 Thanks again to everyone who believed in this project and helped make it a reality!
 
