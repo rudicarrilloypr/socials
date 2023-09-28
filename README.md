@@ -133,9 +133,6 @@ To run tests, run the following command:
 
 I'd like to express my gratitude to everyone who made this project possible.
 
-- Original design idea by **Nelson Sakwa** on **Behance**.
-- Mexico's pictures via **Unsplash**
-
 Thanks again to everyone who believed in this project and helped make it a reality!
 
 <!--- Future Features ---->
