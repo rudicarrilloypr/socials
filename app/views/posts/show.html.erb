@@ -1,2 +1,8 @@
-<h1>Post Details</h1>
-<!-- Display post details here -->
+<h1><%= @post.title %></h1>
+<p>By: <%= link_to @user.name, user_path(@user) %></p>
+<h2>Recent Comments:</h2>
+<ul>
+  <% @recent_comments.each do |comment| %>
+    <li><%= comment.text %></li>
+  <% end %>
+</ul>
