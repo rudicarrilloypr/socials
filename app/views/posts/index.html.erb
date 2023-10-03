@@ -1,6 +1,40 @@
-<h1>All Posts by <%= @user.name %></h1>
-<ul>
+<div class="container mt-5">
+  <!-- Sección de usuario -->
+  <div class="d-flex align-items-center mb-4">
+    <div class="p-3">
+      <img src="path_to_default_profile_pic.jpg" alt="Profile" class="img-thumbnail" style="width: 100px; height: 100px;">
+    </div>
+    <div class="flex-grow-1 p-3">
+      <h1><%= @user.name %></h1>
+      <p><small><%= @user.posts_counter %> posts</small></p>
+    </div>
+  </div>
+  
+  <!-- Sección de lista de posts -->
+  <h2 class="mb-4">All Posts by <%= @user.name %></h2>
+  
   <% @posts.each do |post| %>
-    <li><%= link_to post.title, user_post_path(@user, post) %></li>
+    <div class="card mb-4">
+      <div class="card-body">
+        <%= link_to post.title, user_post_path(@user, post) %>
+      </div>
+    </div>
+    
+    <!-- Comentarios para el post actual -->
+    <div class="card mt-2">
+      <div class="card-body">
+        <h5>Comments for <%= post.title %></h5>
+        <ul class="list-group">
+          <% post.comments.limit(10).each do |comment| %>
+              <li class="list-group-item"><%= comment.text %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   <% end %>
-</ul>
+  
+  <!-- Paginación -->
+  <div class="mt-4 d-flex justify-content-center">
+    <%= will_paginate @posts %>
+  </div>
+</div>
