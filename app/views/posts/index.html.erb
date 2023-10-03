@@ -35,6 +35,6 @@
   
   <!-- Paginación -->
   <div class="mt-4 d-flex justify-content-center">
-    <%= will_paginate @posts %>
+  <%= will_paginate @posts, previous_label: '&laquo;', next_label: '&raquo;', class: 'pagination justify-content-center' %>
   </div>
 </div>
