@@ -1,8 +1,24 @@
-<h1><%= @post.title %></h1>
-<p>By: <%= link_to @user.name, user_path(@user) %></p>
-<h2>Recent Comments:</h2>
-<ul>
-  <% @recent_comments.each do |comment| %>
-    <li><%= comment.text %></li>
-  <% end %>
-</ul>
+<div class="container mt-5">
+  <h1 class="mb-4"><%= @post.title %></h1>
+  
+  <div class="card mb-4">
+    <div class="card-body">
+    <%= @post.text %>
+      <div class="text-right">
+        <small><%= @post.likes_counter %> likes</small>
+        <small><%= @post.comments_counter %> comments</small>
+      </div>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-body">
+      <h4>Comments</h4>
+      <ul class="list-group">
+        <% @recent_comments.each do |comment| %>
+            <li class="list-group-item"><%= comment.text %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

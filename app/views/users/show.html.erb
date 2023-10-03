@@ -1,7 +1,26 @@
-<h1><%= @user.name %></h1>
-<h2>Recent Posts:</h2>
-<ul>
+<div class="container mt-5">
+  <h1 class="mb-4"><%= @user.name %></h1>
+  <div class="d-flex align-items-center mb-4">
+    <div class="p-3">
+      <img src="path_to_default_profile_pic.jpg" alt="Profile" class="img-thumbnail" style="width: 100px; height: 100px;">
+    </div>
+    <div class="flex-grow-1 p-3">
+      <h4><%= @user.name %></h4>
+      <p><small><%= @user.posts_counter %> posts</small></p>
+    </div>
+  </div>
+  
+  <div class="mb-4">
+    <p><%= @user.bio %></p>
+  </div>
+  
   <% @recent_posts.each do |post| %>
-    <li><%= link_to post.title, user_post_path(@user, post) %></li>
+    <div class="card mb-4">
+      <div class="card-body">
+        <%= link_to post.title, user_post_path(@user, post) %>
+      </div>
+    </div>
   <% end %>
-</ul>
+  
+  <%= link_to 'All posts', user_posts_path(@user), class: "btn btn-primary" %>
+</div>
