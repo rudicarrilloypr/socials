@@ -1,19 +1,20 @@
 <div class="container mt-5">
-  <h1 class="mb-4"><%= @user.name %></h1>
-  <div class="d-flex align-items-center mb-4">
+  <div class="d-flex align-items-start mb-4">
     <div class="p-3">
       <img src="path_to_default_profile_pic.jpg" alt="Profile" class="img-thumbnail" style="width: 100px; height: 100px;">
     </div>
-    <div class="flex-grow-1 p-3">
+    <div class="border p-3 flex-grow-1 d-flex flex-column">
       <h4><%= @user.name %></h4>
-      <p><small><%= @user.posts_counter %> posts</small></p>
+      <div class="mt-auto text-right">
+        <small><%= @user.posts_counter %> posts</small>
+      </div>
     </div>
   </div>
-  
+
   <div class="mb-4">
     <p><%= @user.bio %></p>
   </div>
-  
+
   <% @recent_posts.each do |post| %>
     <div class="card mb-4">
       <div class="card-body">
@@ -21,6 +22,6 @@
       </div>
     </div>
   <% end %>
-  
+
   <%= link_to 'All posts', user_posts_path(@user), class: "btn btn-primary" %>
 </div>
