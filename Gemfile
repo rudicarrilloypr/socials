@@ -54,6 +54,7 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 gem 'rails-controller-testing'
 
+gem 'rails-ujs'
 gem 'will_paginate', '~> 3.3.0'
 
 group :development, :test do
