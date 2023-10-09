@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts.includes(:likes, {comments: :author}).paginate(page: params[:page], per_page: 3)
+    @posts = @user.posts.includes(:likes, { comments: :author }).paginate(page: params[:page], per_page: 3)
   end
-  
+
   def show
     @user = User.find(params[:user_id])
-    @post = @user.posts.includes(:likes, {comments: :author}).find(params[:id])
+    @post = @user.posts.includes(:likes, { comments: :author }).find(params[:id])
     @recent_comments = @post.five_recent_comments
   end
 
