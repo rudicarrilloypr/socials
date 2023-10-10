@@ -5,7 +5,7 @@ RSpec.feature 'Post Show', type: :feature do
   let(:user) { create(:user) }
   let(:post) { create(:post, author: user) }
   let!(:comments) { create_list(:comment, 3, post: post) } # Let's assume you have 3 comments for this post.
-  
+
   before do
     visit user_post_path(user, post)
   end
@@ -18,19 +18,19 @@ RSpec.feature 'Post Show', type: :feature do
     expect(page).to have_content(user.name)
   end
 
-  scenario "seeing the number of comments for the post" do
+  scenario 'seeing the number of comments for the post' do
     expect(page).to have_content("#{post.comments_counter} comments")
   end
 
-  scenario "seeing the number of likes for the post" do
+  scenario 'seeing the number of likes for the post' do
     expect(page).to have_content("#{post.likes_counter} likes")
   end
 
-  scenario "seeing post body" do
+  scenario 'seeing post body' do
     expect(page).to have_content(post.text) # Assuming the post's body is in the `text` attribute.
   end
 
-  scenario "seeing the usernames of each commentor and their comments" do
+  scenario 'seeing the usernames of each commentor and their comments' do
     comments.each do |comment|
       expect(page).to have_content(comment.author.name)
       expect(page).to have_content(comment.text)
