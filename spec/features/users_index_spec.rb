@@ -11,7 +11,6 @@ RSpec.feature 'User Index', type: :feature do
 
     users.each do |user|
       expect(page).to have_content(user.name)
-      # Update to match the actual image source
       expect(page).to have_selector("img[src$='path_to_default_profile_pic.jpg']")
       expect(page).to have_content("#{user.posts.count} posts")
     end

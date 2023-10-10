@@ -4,7 +4,7 @@ require 'rails_helper'
 RSpec.feature 'Post Show', type: :feature do
   let(:user) { create(:user) }
   let(:post) { create(:post, author: user) }
-  let!(:comments) { create_list(:comment, 3, post: post) } # Let's assume you have 3 comments for this post.
+  let!(:comments) { create_list(:comment, 3, post: post) }
 
   before do
     visit user_post_path(user, post)
@@ -27,7 +27,7 @@ RSpec.feature 'Post Show', type: :feature do
   end
 
   scenario 'seeing post body' do
-    expect(page).to have_content(post.text) # Assuming the post's body is in the `text` attribute.
+    expect(page).to have_content(post.text)
   end
 
   scenario 'seeing the usernames of each commentor and their comments' do

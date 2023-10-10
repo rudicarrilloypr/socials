@@ -10,14 +10,11 @@ RSpec.feature 'User Show', type: :feature do
 
   scenario "viewing a user's details" do
     expect(page).to have_content(user.name)
-    # Update to match the actual image source
     expect(page).to have_selector("img[src$='path_to_default_profile_pic.jpg']")
     expect(page).to have_content(user.bio) if user.bio
     expect(page).to have_content("#{user.posts.count} posts")
     user.posts.limit(3).each do |post|
       expect(page).to have_content(post.title)
-      # Comment out if the post model doesn't have a body attribute
-      # expect(page).to have_content(post.body.truncate(100))
     end
   end
 
