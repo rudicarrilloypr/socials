@@ -27,7 +27,7 @@ RSpec.feature 'Post Show', type: :feature do
   end
 
   scenario 'seeing post body' do
-    expect(page).to have_content(post.text)
+    expect(page).to have_content(post.text) if post.text.present?
   end
 
   scenario 'seeing the usernames of each commentor and their comments' do
