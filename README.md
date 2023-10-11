@@ -127,6 +127,12 @@ To run tests, run the following command:
 - LinkedIn: [Rudi Carrillo](https://www.linkedin.com/in/rudi-carrillo/)
 - Instagram: [@__rudicarrillo](https://www.instagram.com/_rudicarrillo/)
 
+👤 **Dievo Vidal Lopez**
+
+- GitHub: [@Diegogagan2587](https://github.com/Diegogagan2587)
+- Twitter: [@dieg02587](https://twitter.com/dieg02587)
+- LinkedIn: [Diego Vidal Lopez](https://www.linkedin.com/in/diego-vidal2587/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏🏻 Acknowledgements <a name="acknowledgements"></a>
