@@ -56,6 +56,10 @@ gem 'rails-controller-testing'
 
 gem 'rails-ujs'
 gem 'will_paginate', '~> 3.3.0'
+# Gemfile
+
+gem 'devise'
+
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
