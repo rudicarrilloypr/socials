@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     # Para registro
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
-    
+
     # Para actualización de cuenta
     devise_parameter_sanitizer.permit(:account_update, keys: [:name])
   end
