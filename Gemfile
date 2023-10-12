@@ -56,7 +56,7 @@ gem 'rails-controller-testing'
 
 gem 'rails-ujs'
 gem 'will_paginate', '~> 3.3.0'
-# Gemfile
+gem 'cancancan'
 
 gem 'devise'
 
