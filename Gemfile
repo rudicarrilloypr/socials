@@ -60,6 +60,10 @@ gem 'will_paginate', '~> 3.3.0'
 
 gem 'devise'
 gem 'jquery-rails'
+gem 'rswag-api'
+gem 'rswag-ui'
+gem 'rswag-specs', '~> 2.0'
+
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
