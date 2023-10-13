@@ -14,11 +14,11 @@ class CommentsController < ApplicationController
       format.json { render json: @comments }
     end
   end
-  
+
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(text: comment_params[:text], author: current_user)
-    
+
     respond_to do |format|
       if @comment.save
         format.html { redirect_to user_post_path(@post.author, @post), notice: 'Comment added!' }
@@ -40,5 +40,4 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:text)
   end
-  
 end
