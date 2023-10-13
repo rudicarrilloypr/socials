@@ -144,7 +144,8 @@ Thanks again to everyone who believed in this project and helped make it a reali
 <!--- Future Features ---->
 
 ## <a href="#future-features"></a>🔮 Future Features
-- Basic UI design
+- Improve UI design
+- Like with icons
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
