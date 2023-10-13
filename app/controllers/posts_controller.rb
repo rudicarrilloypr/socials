@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:likes, { comments: :author }).paginate(page: params[:page], per_page: 3)
@@ -21,6 +22,14 @@ class PostsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @user = User.find(params[:user_id])
+    authorize! :destroy, @post
+    @post = @user.posts.find(params[:id])
+    @post.destroy
+    redirect_to user_posts_path(@user), notice: 'Post deleted!'
   end
 
   private

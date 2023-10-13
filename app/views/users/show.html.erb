@@ -12,18 +12,26 @@
   </div>
 
   <div class="mb-4">
-    <p><%= @user.bio %></p>ue
+    <p><%= @user.bio %></p>
   </div>
+
+  <%= link_to 'Create new post', new_user_post_path(@user), class: "btn btn-primary mt-4" %> 
+
+  <h2 class="mb-4">Recent Posts</h2>
 
   <% @recent_posts.each do |post| %>
     <div class="card mb-4">
       <div class="card-body">
-        <%= link_to post.title, user_post_path(@user, post) %>
+        <h5><%= link_to post.title, user_post_path(@user, post) %></h5>
+        <% if post.text.length > 35 %>
+          <p><%= post.text.first(35) %>... <%= link_to 'see more', user_post_path(@user, post) %></p>
+        <% else %>
+          <p><%= post.text %></p>
+        <% end %>
         <p><%= post.comments.count %> comments</p>
       </div>
     </div>
   <% end %>
-  
 
   <%= link_to 'All posts', user_posts_path(@user), class: "btn btn-primary" %>
 </div>
