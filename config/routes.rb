@@ -11,8 +11,12 @@ Rails.application.routes.draw do
   
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :new, :create] do
-      resources :comments, only: [:new, :create]
       resources :likes, only: [:create, :destroy]
+      resource :deletion, only: [:destroy], controller: 'post_deletions'
+      resources :comments, only: [:new, :create, :show] do
+        resource :deletion, only: [:destroy], controller: 'comment_deletions'
+      end
+      
     end
   end
 end
