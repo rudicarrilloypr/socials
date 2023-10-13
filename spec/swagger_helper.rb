@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.configure do |config|
-  config.swagger_root = Rails.root.to_s + '/swagger'
+  config.swagger_root = "#{Rails.root}/swagger"
   config.swagger_docs = {
     'v1/swagger.json' => {
       openapi: '3.0.0',
@@ -32,7 +32,7 @@ RSpec.configure do |config|
               title: { type: :string },
               text: { type: :string }
             },
-            required: [ 'id', 'title', 'text' ]
+            required: %w[id title text]
           },
           Comment: {
             type: :object,
@@ -41,7 +41,7 @@ RSpec.configure do |config|
               text: { type: :string },
               author: { type: :string }
             },
-            required: [ 'id', 'text', 'author' ]
+            required: %w[id text author]
           }
         }
       }

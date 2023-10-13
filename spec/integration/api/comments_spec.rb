@@ -28,7 +28,7 @@ describe 'API V1 Comments', swagger_doc: 'v1/swagger.json' do
           properties: {
             text: { type: :string }
           },
-          required: [ 'text' ]
+          required: ['text']
         }
 
         response '201', 'Comment created' do
