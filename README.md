@@ -66,6 +66,7 @@
 - [X] **Comments**
 - [X] **Likes**
 - [X] **Followers**
+- [X] **API**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -146,6 +147,8 @@ Thanks again to everyone who believed in this project and helped make it a reali
 ## <a href="#future-features"></a>🔮 Future Features
 - Improve UI design
 - Like with icons
+- Add profile picture
+- Add Bio to each profile
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
